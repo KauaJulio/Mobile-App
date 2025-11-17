@@ -1,0 +1,36 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" href="/tabs/home">
+      @if (tabs?.getSelected() === 'home') {
+      <ion-icon name="home"></ion-icon>
+    } @else {
+      <ion-icon name="home-outline"></ion-icon>
+    }
+      <ion-label>Início</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="games" href="/tabs/games">
+      @if (tabs?.getSelected() === 'games') {
+        <ion-icon name="game-controller"></ion-icon>
+      } @else {
+        <ion-icon name="game-controller-outline"></ion-icon>
+      }
+      <ion-label>Jogos</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="news" href="/tabs/news">
+      @if (tabs?.getSelected() === 'news') {
+        <ion-icon name="newspaper"></ion-icon>
+      } @else {
+        <ion-icon name="newspaper-outline"></ion-icon>
+      }
+      <ion-label>Novidades</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="settings" href="/tabs/settings">
+      @if (tabs?.getSelected() === 'settings') {
+        <ion-icon name="settings"></ion-icon>
+      } @else {
+        <ion-icon name="settings-outline"></ion-icon>
+      }
+      <ion-label>Configurações	</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
