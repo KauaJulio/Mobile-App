@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsPage implements OnInit {
 
-  constructor() { }
+  darkModeEnable: true = true;
 
-  ngOnInit() {
+  constructor() { }
+  ngOnInit(): void {
+    this.toggleDarkMode();
+  }
+
+  toggleDarkMode(): void {
+    document.documentElement.classList.toggle('ion-palette-dark', this.darkModeEnable);
   }
 
 }

@@ -1,20 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar class="ion-no-shadow" [ngStyle]="{'--background': headerBackgroundColor}">
     <ion-title>
-      HeroisFlix
+      HeroFlix
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true" [scrollEvents]="true" (ionScroll)="onScroll($event)" [ngStyle]="{'--background': backgroundColor}">
+  
+  <div class="poster-content">
+  <img #posterImage src="./assets/img/batman.jpg">
   </div>
+  <p *ngFor="let item of [].constructor(100); let i = index">Item {{ i }}</p>
 </ion-content>

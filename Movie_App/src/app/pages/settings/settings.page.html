@@ -10,4 +10,6 @@
       <ion-title size="large">settings</ion-title>
     </ion-toolbar>
   </ion-header>
+  <br>
+  <ion-toggle [(ngModel)]="darkModeEnable" (ionChange)="toggleDarkMode()">Dark Mode</ion-toggle>
 </ion-content>
